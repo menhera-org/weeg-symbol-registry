@@ -1,6 +1,6 @@
 {
   "name": "weeg-symbol-registry",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "WebExtensions Experts Group library for storing values by symbols as keys.",
   "main": "dist/index.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "types": "dist/index.d.ts",
   "dependencies": {
-    "weeg-types": "^0.3.0"
+    "weeg-types": "^0.4.0"
   }
 }
