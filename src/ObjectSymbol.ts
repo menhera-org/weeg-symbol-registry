@@ -17,6 +17,13 @@
   @license
 */
 
-export { ObjectSymbol } from "./ObjectSymbol.js";
-export { SymbolObject } from "./SymbolObject.js";
-export { SymbolStorage } from "./SymbolStorage.js";
+const objectSymbols = new WeakMap<{}, symbol>();
+
+export const ObjectSymbol = (object: {}): symbol => {
+  if (objectSymbols.has(object)) {
+    return objectSymbols.get(object) as symbol;
+  }
+  const symbol = Symbol();
+  objectSymbols.set(object, symbol);
+  return symbol;
+};

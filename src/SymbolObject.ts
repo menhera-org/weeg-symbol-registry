@@ -17,6 +17,15 @@
   @license
 */
 
-export { ObjectSymbol } from "./ObjectSymbol.js";
-export { SymbolObject } from "./SymbolObject.js";
-export { SymbolStorage } from "./SymbolStorage.js";
+import { FrozenNullPrototype } from "weeg-types";
+
+const symbolObjects = new Map<symbol, FrozenNullPrototype>();
+
+export const SymbolObject = (symbol: symbol): Readonly<FrozenNullPrototype> => {
+  if (symbolObjects.has(symbol)) {
+    return symbolObjects.get(symbol) as FrozenNullPrototype;
+  }
+  const object = new FrozenNullPrototype();
+  symbolObjects.set(symbol, object);
+  return object;
+};

@@ -1,14 +1,14 @@
 {
-  "name": "weeg-library-template",
+  "name": "weeg-symbol-registry",
   "version": "0.1.0",
-  "description": "WebExtensions Experts Groups library template",
+  "description": "WebExtensions Experts Group library for storing values by symbols as keys.",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/menhera-org/weeg-library-template.git"
+    "url": "git+https://github.com/menhera-org/weeg-symbol-registry.git"
   },
   "keywords": [
     "weeg"
@@ -16,11 +16,14 @@
   "author": "WebExtensions Experts Group",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/menhera-org/weeg-library-template/issues"
+    "url": "https://github.com/menhera-org/weeg-symbol-registry/issues"
   },
-  "homepage": "https://github.com/menhera-org/weeg-library-template#readme",
+  "homepage": "https://github.com/menhera-org/weeg-symbol-registry#readme",
   "devDependencies": {
     "typescript": "^5.0.3"
   },
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "weeg-types": "^0.3.0"
+  }
 }
